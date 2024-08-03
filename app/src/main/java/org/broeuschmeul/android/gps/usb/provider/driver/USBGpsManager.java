@@ -527,7 +527,7 @@ public class USBGpsManager {
             }
 
             if (setDeviceSpeed) {
-                debugLog("Setting connection speed to: " + deviceSpeed);
+                Log.i(LOG_TAG, "Setting connection speed to: " + deviceSpeed);
                 try {
                     connectionSpeedBuffer.putInt(0, Integer.valueOf(deviceSpeed)); // Put the value in
                     connection.controlTransfer(0x21, 32, 0, 0, data, 7, TIMEOUT); // Set baudrate

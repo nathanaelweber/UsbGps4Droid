@@ -1,1 +1,15 @@
+pluginManagement {
+    repositories {
+        jcenter()
+        google()
+    }
+}
+
+dependencyResolutionManagement {
+    repositories {
+        jcenter()
+        google()
+    }
+}
+rootProject.name = "UsbGps4Droid"
 include ':app'
