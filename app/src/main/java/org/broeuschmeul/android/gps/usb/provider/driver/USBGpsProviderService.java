@@ -203,7 +203,7 @@ public class USBGpsProviderService extends Service implements USBGpsManager.Nmea
                                     this,
                                     0,
                                     new Intent(this, GpsInfoActivity.class),
-                                    PendingIntent.FLAG_CANCEL_CURRENT
+                                    PendingIntent.FLAG_CANCEL_CURRENT | PendingIntent.FLAG_IMMUTABLE
                             );
 
                     sharedPreferences

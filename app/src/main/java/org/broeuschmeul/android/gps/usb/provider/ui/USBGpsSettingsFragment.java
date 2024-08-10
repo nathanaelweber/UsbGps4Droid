@@ -52,6 +52,7 @@ import android.widget.TextView;
 
 import org.broeuschmeul.android.gps.usb.provider.BuildConfig;
 import org.broeuschmeul.android.gps.usb.provider.R;
+import org.broeuschmeul.android.gps.usb.provider.driver.HardSleeper;
 import org.broeuschmeul.android.gps.usb.provider.driver.USBGpsProviderService;
 import org.broeuschmeul.android.gps.usb.provider.util.SuperuserManager;
 
@@ -87,8 +88,8 @@ public class USBGpsSettingsFragment extends PreferenceFragmentCompat implements
                 }
 
                 try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException e) {
+                    HardSleeper.sleepHardMillis(10);
+                } catch (Exception e) {
                     break;
                 }
             }
